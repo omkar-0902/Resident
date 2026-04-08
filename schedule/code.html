@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-fixed-variant": "#6a3c03",
+            "on-tertiary": "#4b2800",
+            "background": "#051612",
+            "error-container": "#93000a",
+            "on-tertiary-container": "#794810",
+            "tertiary": "#ffdec4",
+            "primary-fixed-dim": "#00e475",
+            "surface-container-low": "#0d1f1a",
+            "surface-container-highest": "#263833",
+            "surface-dim": "#051612",
+            "on-secondary": "#003823",
+            "on-error-container": "#ffdad6",
+            "secondary-fixed-dim": "#97d4b0",
+            "on-primary": "#003918",
+            "on-tertiary-fixed": "#2d1600",
+            "on-primary-container": "#00612e",
+            "on-secondary-fixed-variant": "#125136",
+            "surface-container-high": "#1c2d28",
+            "primary": "#75ff9e",
+            "on-primary-fixed-variant": "#005226",
+            "outline-variant": "#3b4a3d",
+            "tertiary-fixed-dim": "#fdb878",
+            "tertiary-fixed": "#ffdcbf",
+            "on-surface": "#d2e7df",
+            "secondary-fixed": "#b2f0cb",
+            "inverse-on-surface": "#22342e",
+            "tertiary-container": "#ffba79",
+            "primary-fixed": "#62ff96",
+            "on-secondary-container": "#86c2a0",
+            "on-primary-fixed": "#00210b",
+            "secondary": "#97d4b0",
+            "surface-bright": "#2b3d37",
+            "error": "#ffb4ab",
+            "surface-container-lowest": "#02110d",
+            "on-surface-variant": "#bacbb9",
+            "on-background": "#d2e7df",
+            "surface-tint": "#00e475",
+            "outline": "#859585",
+            "inverse-surface": "#d2e7df",
+            "surface-variant": "#263833",
+            "secondary-container": "#125136",
+            "surface": "#051612",
+            "on-secondary-fixed": "#002112",
+            "inverse-primary": "#006d35",
+            "primary-container": "#00e676",
+            "surface-container": "#11231e",
+            "on-error": "#690005"
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    @keyframes pulse-glow {
+      0%, 100% { filter: drop-shadow(0 0 15px rgba(0, 230, 118, 0.4)); opacity: 0.9; }
+      50% { filter: drop-shadow(0 0 30px rgba(0, 230, 118, 0.7)); opacity: 1; }
+    }
+    .eco-glow {
+      animation: pulse-glow 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .floating-anim {
+      animation: float 4s ease-in-out infinite;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body min-h-screen pb-12">
+<!-- Status Bar Simulator -->
+<div class="fixed top-0 w-full z-[60] flex justify-between items-center px-6 py-2 text-[10px] font-bold tracking-widest text-on-surface-variant">
+<span>9:41</span>
+<div class="flex gap-1 items-center">
+<span class="material-symbols-outlined text-[12px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[12px]">wifi</span>
+<span class="material-symbols-outlined text-[12px]">battery_full</span>
+</div>
+</div>
+<!-- Shared Component: TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#051612]/80 backdrop-blur-xl shadow-[0_0_30px_rgba(2,17,13,0.4)] flex justify-between items-center px-6 py-4 w-full pt-8">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant/20 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="portrait of a young man with a friendly expression in high-key lighting with soft green ambient tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAmq8aFQXV4nnBl1yODxlE14PhbL04kAHSNVLSBfqqQbmOoKmp8NUDhczG5JMJdFOrnQB2JEsIj12uwvCEAtxhTIfdL_UiqwEoOAL7P2gSs4d0QyI_1w1bh1gIQfl1WRFADrxx9ChhY7Ezi2hFzCGg9-narm3uKw6rCyCmGLdtmxp3SlfmMjk7jgWpmXFtjodFCaNlZQZAP5-m4wPQnjq61AWMJgtsNXH_x25EI-qpWLdfPzFlmA9aXbEfiQkUyp3NiGR6MtipBQ"/>
+</div>
+<span class="text-[#00E676] font-bold tracking-tighter font-headline uppercase tracking-widest text-sm">Zone 4B</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#BACBB9] hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 space-y-8 max-w-2xl mx-auto">
+<!-- Screen Header -->
+<section>
+<h1 class="font-headline text-4xl font-bold tracking-tight text-primary leading-none">Schedule a Pickup</h1>
+<p class="text-on-surface-variant mt-2 text-sm">Confirm your next automated municipal collection.</p>
+</section>
+<!-- Next Scheduled Pickup Card -->
+<section class="space-y-4">
+<label class="font-headline text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Select Pickup Date</label>
+<div class="flex gap-3 overflow-x-auto pb-4 hide-scrollbar -mx-6 px-6">
+<!-- Selected Date -->
+<div class="flex-shrink-0 w-20 h-24 bg-primary rounded-2xl flex flex-col items-center justify-center shadow-[0_0_20px_rgba(0,230,118,0.3)] ring-1 ring-primary">
+<span class="text-[#003918] text-xs font-bold uppercase tracking-widest">Mon</span>
+<span class="text-[#003918] text-2xl font-headline font-bold">13</span>
+</div>
+<!-- Future Dates -->
+<div class="flex-shrink-0 w-20 h-24 bg-surface-container-low border border-outline-variant/20 rounded-2xl flex flex-col items-center justify-center hover:border-primary/40 transition-colors">
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest">Tue</span>
+<span class="text-on-surface text-2xl font-headline font-bold">14</span>
+</div>
+<div class="flex-shrink-0 w-20 h-24 bg-surface-container-low border border-outline-variant/20 rounded-2xl flex flex-col items-center justify-center hover:border-primary/40 transition-colors">
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest">Wed</span>
+<span class="text-on-surface text-2xl font-headline font-bold">15</span>
+</div>
+<div class="flex-shrink-0 w-20 h-24 bg-surface-container-low border border-outline-variant/20 rounded-2xl flex flex-col items-center justify-center hover:border-primary/40 transition-colors">
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest">Thu</span>
+<span class="text-on-surface text-2xl font-headline font-bold">16</span>
+</div>
+<div class="flex-shrink-0 w-20 h-24 bg-surface-container-low border border-outline-variant/20 rounded-2xl flex flex-col items-center justify-center hover:border-primary/40 transition-colors">
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest">Fri</span>
+<span class="text-on-surface text-2xl font-headline font-bold">17</span>
+</div>
+</div>
+<!-- Fixed Time Window Info -->
+<div class="bg-surface-container/50 border border-outline-variant/10 rounded-2xl p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div>
+<p class="text-on-surface-variant text-[10px] uppercase tracking-wider font-bold">Fixed Schedule</p>
+<p class="text-on-surface font-semibold">07:00 AM - 10:00 AM</p>
+</div>
+</div>
+<div class="bg-primary/10 px-3 py-1 rounded-full">
+<span class="text-primary text-[10px] font-bold uppercase">Municipal</span>
+</div>
+</div>
+</section>
+<!-- Visual Illustration (Replaces Pickup Notes) -->
+<section class="flex flex-col items-center justify-center py-6">
+<div class="relative w-48 h-48 flex items-center justify-center">
+<!-- Soft Neon Glow -->
+<div class="absolute inset-0 bg-[#00E676]/10 blur-[40px] rounded-full eco-glow"></div>
+<!-- Floating Illustration -->
+<div class="relative floating-anim">
+<span class="material-symbols-outlined text-primary text-[100px] eco-glow" style="font-variation-settings: 'FILL' 1, 'wght' 200;">eco</span>
+<div class="absolute -bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-surface-container-highest/60 backdrop-blur-md px-4 py-1.5 rounded-full border border-primary/20">
+<span class="material-symbols-outlined text-primary text-sm">location_city</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface">Sustainable Zone</span>
+</div>
+</div>
+</div>
+<p class="text-on-surface-variant text-center text-xs mt-4 max-w-[240px] leading-relaxed">Your scheduled pickup supports the 4B community eco-network.</p>
+</section>
+<!-- Points Preview -->
+<div class="flex items-center justify-between p-6 bg-secondary-container/20 rounded-3xl border border-secondary-container/10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+<span class="text-sm font-medium text-secondary tracking-tight">+40 EcoPoints for this pickup</span>
+</div>
+<span class="material-symbols-outlined text-secondary/40 text-sm">info</span>
+</div>
+<!-- Action Button -->
+<button class="w-full py-5 bg-[#00E676] text-[#003918] rounded-full font-headline font-bold uppercase tracking-[0.2em] text-sm shadow-[0_10px_30px_rgba(0,230,118,0.3)] hover:scale-[1.02] active:scale-95 transition-all">
+      Confirm Request
+    </button>
+</main>
+<!-- iOS Home Indicator Overlay (Simulated) -->
+<div class="fixed bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-on-surface/10 rounded-full z-[60]"></div>
+<!-- Shared Component: BottomNavBar -->
+</body></html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#6a3c03",
+              "on-tertiary": "#4b2800",
+              "background": "#051612",
+              "error-container": "#93000a",
+              "on-tertiary-container": "#794810",
+              "tertiary": "#ffdec4",
+              "primary-fixed-dim": "#00e475",
+              "surface-container-low": "#0d1f1a",
+              "surface-container-highest": "#263833",
+              "surface-dim": "#051612",
+              "on-secondary": "#003823",
+              "on-error-container": "#ffdad6",
+              "secondary-fixed-dim": "#97d4b0",
+              "on-primary": "#003918",
+              "on-tertiary-fixed": "#2d1600",
+              "on-primary-container": "#00612e",
+              "on-secondary-fixed-variant": "#125136",
+              "surface-container-high": "#1c2d28",
+              "primary": "#75ff9e",
+              "on-primary-fixed-variant": "#005226",
+              "outline-variant": "#3b4a3d",
+              "tertiary-fixed-dim": "#fdb878",
+              "tertiary-fixed": "#ffdcbf",
+              "on-surface": "#d2e7df",
+              "secondary-fixed": "#b2f0cb",
+              "inverse-on-surface": "#22342e",
+              "tertiary-container": "#ffba79",
+              "primary-fixed": "#62ff96",
+              "on-secondary-container": "#86c2a0",
+              "on-primary-fixed": "#00210b",
+              "secondary": "#97d4b0",
+              "surface-bright": "#2b3d37",
+              "error": "#ffb4ab",
+              "surface-container-lowest": "#02110d",
+              "on-surface-variant": "#bacbb9",
+              "on-background": "#d2e7df",
+              "surface-tint": "#00e475",
+              "outline": "#859585",
+              "inverse-surface": "#d2e7df",
+              "surface-variant": "#263833",
+              "secondary-container": "#125136",
+              "surface": "#051612",
+              "on-secondary-fixed": "#002112",
+              "inverse-primary": "#006d35",
+              "primary-container": "#00e676",
+              "surface-container": "#11231e",
+              "on-error": "#690005"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        background: rgba(43, 61, 55, 0.4);
+        backdrop-filter: blur(20px);
+      }
+      .neon-glow {
+        box-shadow: 0 0 20px rgba(0, 230, 118, 0.3);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body min-h-screen flex flex-col items-center justify-center overflow-hidden">
+<!-- Status Bar Simulation -->
+<div class="fixed top-0 w-full flex justify-between items-center px-8 py-4 z-[60] text-on-surface-variant text-xs font-medium">
+<span>9:41</span>
+<div class="flex gap-1.5 items-center">
+<span class="material-symbols-outlined text-[14px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[14px]">wifi</span>
+<span class="material-symbols-outlined text-[14px]">battery_full</span>
+</div>
+</div>
+<!-- Main Content Canvas -->
+<main class="relative w-full max-w-md h-screen flex flex-col px-8 pt-20 pb-12">
+<!-- Hero Illustration Area (Asymmetric Layout) -->
+<div class="relative flex-1 flex flex-col items-center justify-center">
+<!-- Background City Silhouette Graphic -->
+<div class="absolute inset-0 flex items-end justify-center opacity-20 grayscale mix-blend-screen pointer-events-none">
+<img class="w-full h-1/2 object-cover mask-gradient" data-alt="stylized futuristic dark city silhouette with sharp geometric skyscrapers under a deep green night sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeAlVx6Sseg5jO56VHNxTQpO_jqRCSnCWkg390AVGzktEUGgkkaPTFwe_Stm6HqbzffGXQR6tG-gtdUjQNWwVKPSDEfySwr1zb6Js2iCNtgDPOp-lKtRDd1f_M9O61W1bjzaSyM2aFY-YNbYAT0TR7tdyyhuD05I5oaFjhZESKbQN1G3ZKLH4NZtbN1UeItiByYQVH7UMklvk5J0iBsSTySGWDDqh3CId0TS_Yx-n-KPC9P6BD6BUNeldawbwQJuq8E7lmK6Wjfg"/>
+</div>
+<!-- Neon Pin - The Digital Forest North Star -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-24 h-24 rounded-full bg-primary-container/20 flex items-center justify-center neon-glow animate-pulse">
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center shadow-[0_0_40px_rgba(0,230,118,0.6)]">
+<span class="material-symbols-outlined text-on-primary-fixed text-4xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+<!-- Radial Glow Background -->
+<div class="absolute -z-10 w-64 h-64 bg-primary/10 rounded-full blur-[80px]"></div>
+</div>
+</div>
+<!-- Text Content Section (Editorial Tension) -->
+<div class="relative z-20 mt-8 mb-12 space-y-4 text-center">
+<h1 class="font-headline text-4xl font-bold tracking-tight text-[#F0FAF4] leading-tight">
+                Allow Location Access
+            </h1>
+<p class="text-[#7CB896] text-lg font-body leading-relaxed px-2">
+                We use your location to match you with the nearest collector and send accurate proximity alerts.
+            </p>
+</div>
+<!-- Action Section -->
+<div class="space-y-4 w-full">
+<button class="w-full bg-primary-container text-on-primary font-headline font-bold py-5 rounded-full text-lg tracking-wide shadow-[0_0_30px_rgba(0,230,118,0.2)] active:scale-95 transition-all duration-200 uppercase">
+                Allow Location
+            </button>
+<button class="w-full bg-transparent border border-outline-variant/30 text-on-surface-variant font-headline font-medium py-5 rounded-full text-md tracking-wider active:scale-95 transition-all duration-200 uppercase">
+                Maybe Later
+            </button>
+</div>
+<!-- Meta Information / Privacy Subtle Note -->
+<div class="mt-8 text-center">
+<p class="text-[10px] font-label uppercase tracking-[0.2em] text-outline-variant">
+                Secure 256-bit encrypted geo-data
+            </p>
+</div>
+<!-- iOS Home Indicator Simulation -->
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-on-surface/20 rounded-full"></div>
+</main>
+<!-- Background Atmospheric Elements (Deep Forest philosophy) -->
+<div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="fixed bottom-[-5%] right-[-5%] w-[50%] h-[50%] bg-surface-container-highest/10 blur-[100px] rounded-full pointer-events-none"></div>
+</body></html>

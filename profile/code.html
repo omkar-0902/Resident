@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-dim": "#051612",
+              "primary-container": "#00e676",
+              "on-secondary-container": "#86c2a0",
+              "on-background": "#d2e7df",
+              "on-error-container": "#ffdad6",
+              "error": "#ffb4ab",
+              "surface-bright": "#2b3d37",
+              "on-tertiary-fixed-variant": "#6a3c03",
+              "inverse-surface": "#d2e7df",
+              "surface-container-high": "#1c2d28",
+              "on-primary-fixed": "#00210b",
+              "on-surface-variant": "#bacbb9",
+              "secondary-container": "#125136",
+              "on-tertiary-container": "#794810",
+              "on-secondary-fixed-variant": "#125136",
+              "tertiary-container": "#ffba79",
+              "inverse-primary": "#006d35",
+              "tertiary-fixed": "#ffdcbf",
+              "tertiary": "#ffdec4",
+              "primary-fixed": "#62ff96",
+              "on-primary-fixed-variant": "#005226",
+              "surface-container-low": "#0d1f1a",
+              "secondary-fixed": "#b2f0cb",
+              "on-tertiary-fixed": "#2d1600",
+              "surface-container-highest": "#263833",
+              "on-primary": "#003918",
+              "on-primary-container": "#00612e",
+              "error-container": "#93000a",
+              "surface-container-lowest": "#02110d",
+              "outline-variant": "#3b4a3d",
+              "outline": "#859585",
+              "surface-variant": "#263833",
+              "surface-tint": "#00e475",
+              "on-error": "#690005",
+              "secondary-fixed-dim": "#97d4b0",
+              "surface": "#051612",
+              "on-secondary-fixed": "#002112",
+              "background": "#051612",
+              "secondary": "#97d4b0",
+              "inverse-on-surface": "#22342e",
+              "primary-fixed-dim": "#00e475",
+              "on-tertiary": "#4b2800",
+              "on-surface": "#d2e7df",
+              "tertiary-fixed-dim": "#fdb878",
+              "primary": "#75ff9e",
+              "on-secondary": "#003823",
+              "surface-container": "#11231e"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-input {
+            background: rgba(43, 61, 55, 0.4);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body min-h-screen">
+<!-- TopAppBar -->
+<nav class="sticky top-0 w-full z-50 bg-[#0D1F1A]/80 backdrop-blur-md shadow-[0_20px_50px_rgba(2,17,13,0.4)] bg-gradient-to-b from-[#11231E] to-transparent">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform text-[#00E676]">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Space_Grotesk'] uppercase tracking-[0.05em] font-bold text-[#00E676]">EDIT PROFILE</h1>
+</div>
+<button class="font-['Space_Grotesk'] uppercase tracking-[0.05em] font-bold text-[#00E676] active:scale-95 transition-transform hover:text-[#75FF9E] transition-colors duration-300">
+                SAVE
+            </button>
+</div>
+</nav>
+<main class="max-w-xl mx-auto px-6 py-10 space-y-12">
+<!-- Profile Section -->
+<section class="flex flex-col items-center">
+<div class="relative group">
+<div class="w-32 h-32 rounded-full overflow-hidden ring-4 ring-primary-container ring-offset-4 ring-offset-surface-dim shadow-[0_0_30px_rgba(0,230,118,0.2)]">
+<img alt="Priya S. Profile" class="w-full h-full object-cover" data-alt="portrait of a confident woman with a friendly smile, natural lighting, soft urban park background with lush greenery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_KODno_F_v3jzwB5oevsrqy93ew-Va62zlIZllg6IlF_kwEWV7BetT-ab_9Tu-8ARCcF8oN3gqC2g4LR80olFm6a74240nK96Bl6WY_m07of4GCm2BfxA6T4FFYqyOh48RNfYVZQhZwtEGPXckjcNgv5ck0v3pdufzMp81xvdxEHmG7AzZ4amOga_QGDPe3GhhnR6qRa4Dqq_lqq7wPIqsqiaFfdKjz0pgc2eU_jShRcJKn5MGznLk8NqySzIPyT6LoXR5c_SDg"/>
+</div>
+<button class="absolute bottom-0 right-0 bg-primary-container text-on-primary w-10 h-10 rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="photo_camera">photo_camera</span>
+</button>
+</div>
+<p class="mt-4 font-headline font-bold text-xl tracking-tight uppercase text-on-background">Priya S.</p>
+<p class="text-on-surface-variant font-label text-xs tracking-widest uppercase">Verified Resident • Zone 4B</p>
+</section>
+<!-- Form Fields Section -->
+<div class="space-y-8">
+<!-- Username -->
+<div class="space-y-2">
+<label class="font-headline font-bold text-[10px] tracking-[0.2em] uppercase text-on-surface-variant ml-1">Username</label>
+<div class="relative group">
+<input class="w-full glass-input border-none rounded-xl py-4 px-5 text-on-surface font-medium focus:ring-1 focus:ring-primary transition-all placeholder:text-on-surface-variant/40" placeholder="Enter your name" type="text" value="Priya S."/>
+<div class="absolute inset-0 rounded-xl pointer-events-none border border-outline-variant opacity-20 group-focus-within:opacity-100 group-focus-within:border-primary transition-opacity"></div>
+</div>
+</div>
+<!-- Phone Number -->
+<div class="space-y-2">
+<label class="font-headline font-bold text-[10px] tracking-[0.2em] uppercase text-on-surface-variant ml-1">Phone Number</label>
+<div class="relative group">
+<input class="w-full glass-input border-none rounded-xl py-4 px-5 text-on-surface font-medium focus:ring-1 focus:ring-primary transition-all placeholder:text-on-surface-variant/40" placeholder="+00 00000 00000" type="tel" value="+91 98765 43210"/>
+<div class="absolute inset-0 rounded-xl pointer-events-none border border-outline-variant opacity-20 group-focus-within:opacity-100 group-focus-within:border-primary transition-opacity"></div>
+</div>
+</div>
+<!-- Address -->
+<div class="space-y-2">
+<label class="font-headline font-bold text-[10px] tracking-[0.2em] uppercase text-on-surface-variant ml-1">My Address</label>
+<div class="relative group">
+<textarea class="w-full glass-input border-none rounded-xl py-4 px-5 text-on-surface font-medium focus:ring-1 focus:ring-primary transition-all placeholder:text-on-surface-variant/40 resize-none" placeholder="Full street address" rows="3">Apartment 4B, Green Towers, Zone 4B</textarea>
+<div class="absolute inset-0 rounded-xl pointer-events-none border border-outline-variant opacity-20 group-focus-within:opacity-100 group-focus-within:border-primary transition-opacity"></div>
+</div>
+</div>
+</div>
+<!-- Call to Action -->
+<div class="pt-6">
+<button class="w-full bg-primary-container text-on-primary font-headline font-bold text-sm tracking-widest uppercase py-5 rounded-full shadow-[0_10px_30px_rgba(0,230,118,0.25)] hover:shadow-[0_15px_40px_rgba(0,230,118,0.4)] active:scale-[0.98] transition-all">
+                SAVE CHANGES
+            </button>
+<p class="text-center mt-6 text-[10px] text-on-surface-variant uppercase tracking-tighter">
+                Last updated on 12 Oct 2023 • <span class="text-primary">Privacy Policy</span>
+</p>
+</div>
+</main>
+<!-- Visual Embellishment: Subtle background glow -->
+<div class="fixed top-1/4 -right-24 w-64 h-64 bg-primary-container/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="fixed bottom-1/4 -left-24 w-64 h-64 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+</body></html>

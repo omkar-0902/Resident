@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#6a3c03",
+              "on-tertiary": "#4b2800",
+              "background": "#051612",
+              "error-container": "#93000a",
+              "on-tertiary-container": "#794810",
+              "tertiary": "#ffdec4",
+              "primary-fixed-dim": "#00e475",
+              "surface-container-low": "#0d1f1a",
+              "surface-container-highest": "#263833",
+              "surface-dim": "#051612",
+              "on-secondary": "#003823",
+              "on-error-container": "#ffdad6",
+              "secondary-fixed-dim": "#97d4b0",
+              "on-primary": "#003918",
+              "on-tertiary-fixed": "#2d1600",
+              "on-primary-container": "#00612e",
+              "on-secondary-fixed-variant": "#125136",
+              "surface-container-high": "#1c2d28",
+              "primary": "#75ff9e",
+              "on-primary-fixed-variant": "#005226",
+              "outline-variant": "#3b4a3d",
+              "tertiary-fixed-dim": "#fdb878",
+              "tertiary-fixed": "#ffdcbf",
+              "on-surface": "#d2e7df",
+              "secondary-fixed": "#b2f0cb",
+              "inverse-on-surface": "#22342e",
+              "tertiary-container": "#ffba79",
+              "primary-fixed": "#62ff96",
+              "on-secondary-container": "#86c2a0",
+              "on-primary-fixed": "#00210b",
+              "secondary": "#97d4b0",
+              "surface-bright": "#2b3d37",
+              "error": "#ffb4ab",
+              "surface-container-lowest": "#02110d",
+              "on-surface-variant": "#bacbb9",
+              "on-background": "#d2e7df",
+              "surface-tint": "#00e475",
+              "outline": "#859585",
+              "inverse-surface": "#d2e7df",
+              "surface-variant": "#263833",
+              "secondary-container": "#125136",
+              "surface": "#051612",
+              "on-secondary-fixed": "#002112",
+              "inverse-primary": "#006d35",
+              "primary-container": "#00e676",
+              "surface-container": "#11231e",
+              "on-error": "#690005"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        background-color: #051612;
+        color: #d2e7df;
+        font-family: 'Inter', sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        background: rgba(43, 61, 55, 0.4);
+      }
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+</head>
+<body class="min-h-screen pb-32">
+<!-- Status Bar (Simulated iOS) -->
+<div class="fixed top-0 w-full h-12 flex justify-between items-center px-8 z-[60] pointer-events-none">
+<span class="text-xs font-semibold font-body">9:41</span>
+<div class="flex gap-1.5">
+<span class="material-symbols-outlined text-xs">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-xs">wifi</span>
+<span class="material-symbols-outlined text-xs">battery_full</span>
+</div>
+</div>
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-[#051612]/80 backdrop-blur-xl shadow-[0_0_30px_rgba(2,17,13,0.4)] flex justify-between items-center px-6 py-4 w-full h-20 pt-10">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+<img alt="Resident Profile" class="w-full h-full object-cover" data-alt="professional close-up portrait of a woman with warm lighting and a soft-focus eco-friendly office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbTuetOtF0xx8L1aTnYPpoEfRKTV8bz6syd5vvLvRx4m_vCjjS1N0ExPXrjzUOuUoroC1iyGJTVSil-_UNx9n-tM3UuSI0IrB5R_RoARJa8P-hQQl-sKc694vpHXWuuI2xpB6i-bn9skrGWJvIgVQR9DnVagvTwxYRdOKwP_qkg8SPa9-bJ2WnTavJ3cyiRV7T5yPhzkZ77nAYnjbuSUepd1cAOa2pHabTNIJEeb3OQU7AM63EQ73Z5T7t_96GR0w16FCqCml5Kg"/>
+</div>
+<h1 class="text-[#00E676] font-bold tracking-tighter font-['Space_Grotesk'] uppercase tracking-widest text-sm">Zone 4B</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#BACBB9] hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Profile Header Section -->
+<section class="flex flex-col items-center mb-12">
+<div class="relative group">
+<div class="w-32 h-32 rounded-full border-2 border-primary/20 p-1 mb-6">
+<div class="w-full h-full rounded-full overflow-hidden bg-surface-container shadow-[0_0_40px_rgba(0,230,118,0.15)]">
+<img alt="Priya S." class="w-full h-full object-cover" data-alt="high-quality cinematic headshot of a stylish professional woman with a minimalist natural background and soft rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdYU7CrZDvLQ5JYLw8gm-8Zacvx9lOdzhigTHXZjlAmD7WxGcRcugzRx866Fr0L01JYDA--rlG89Jrj0WSNFsZoLhBpuCu9oAziIKk393wP0bPP6HWfcigBUBtveQUbuK-Oviroob2uZPpjVjd7m7L99_kXYu-T8J7QVfUeG46FJyO1MN9no4GcHZp84dv9w4ERnEthXm4iGPVfGNUpd1ofBlDsyufMSOE382nlYJClgAZXX6NCAsNG4-9t0ZB3ObaE9Z9DifFzQ"/>
+</div>
+</div>
+<button class="absolute bottom-6 right-0 bg-primary-container text-on-primary-container w-10 h-10 rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+</div>
+<h2 class="font-headline text-3xl font-bold tracking-tight text-on-surface mb-1">Priya S.</h2>
+<p class="font-body text-on-surface-variant text-sm mb-4">priya.s@zone4b.resident</p>
+<span class="bg-secondary-container/30 text-secondary px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase border border-secondary/20">
+            Zone 4B Resident
+        </span>
+</section>
+<!-- Stats Bento Grid -->
+<section class="grid grid-cols-3 gap-4 mb-12">
+<div class="bg-surface-container p-4 rounded-xl flex flex-col items-center justify-center text-center">
+<span class="text-on-surface-variant text-[10px] uppercase tracking-widest mb-2 font-bold">Total Pickups</span>
+<span class="font-headline text-2xl font-bold text-primary">142</span>
+</div>
+<div class="bg-surface-container p-4 rounded-xl flex flex-col items-center justify-center text-center">
+<span class="text-on-surface-variant text-[10px] uppercase tracking-widest mb-2 font-bold">EcoPoints</span>
+<span class="font-headline text-2xl font-bold text-primary">2.8k</span>
+</div>
+<div class="bg-surface-container p-4 rounded-xl flex flex-col items-center justify-center text-center border border-primary/10 shadow-[0_0_15px_rgba(0,230,118,0.05)]">
+<span class="text-on-surface-variant text-[10px] uppercase tracking-widest mb-2 font-bold">Tier</span>
+<span class="font-headline text-xl font-bold text-primary-fixed uppercase tracking-tighter">Elite</span>
+</div>
+</section>
+<!-- Settings List -->
+<section class="space-y-3 mb-12">
+<h3 class="font-headline text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/60 font-bold px-2 mb-4">Account Preferences</h3>
+<div class="bg-surface-container-low rounded-2xl overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">lock</span>
+</div>
+<span class="font-body text-sm font-medium text-on-surface">Change Password</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+<h3 class="font-headline text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/60 font-bold px-2 pt-6 mb-4">Support &amp; Legal</h3>
+<button class="w-full mt-8 border border-error/30 text-error bg-error/5 py-4 rounded-2xl font-bold text-sm tracking-widest uppercase active:scale-[0.98] transition-all">
+            Logout
+        </button>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full rounded-t-[24px] z-50 pb-safe bg-[#0D1F1A]/90 backdrop-blur-lg border-t border-[#3B4A3D]/15 shadow-[0_-10px_40px_rgba(2,17,13,0.5)]">
+<div class="flex justify-around items-center h-20 px-4 w-full">
+<a class="flex flex-col items-center justify-center text-[#BACBB9] px-3 py-2 hover:text-[#00E676] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">home_max</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-tight mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#BACBB9] px-3 py-2 hover:text-[#00E676] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-tight mt-1">Requests</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#BACBB9] px-3 py-2 hover:text-[#00E676] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">military_tech</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-tight mt-1">Rewards</span>
+</a>
+<!-- Removed 'Alerts' option and re-spaced remaining items using flex justify-around -->
+<a class="flex flex-col items-center justify-center bg-[#00E676]/10 text-[#00E676] rounded-2xl px-3 py-2 shadow-[0_0_15px_rgba(0,230,118,0.15)] active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-tight mt-1">Profile</span>
+</a>
+</div>
+<!-- iOS Home Indicator -->
+<div class="flex justify-center pb-2">
+<div class="w-32 h-1.5 bg-on-surface/20 rounded-full"></div>
+</div>
+</nav>
+</body></html>

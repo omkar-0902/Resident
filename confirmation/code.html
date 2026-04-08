@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#11231e",
+              "secondary-fixed-dim": "#97d4b0",
+              "primary-container": "#00e676",
+              "surface-tint": "#00e475",
+              "on-secondary-fixed-variant": "#125136",
+              "tertiary": "#ffdec4",
+              "on-secondary-container": "#86c2a0",
+              "on-error-container": "#ffdad6",
+              "on-tertiary-container": "#794810",
+              "tertiary-fixed-dim": "#fdb878",
+              "surface-container-lowest": "#02110d",
+              "secondary": "#97d4b0",
+              "primary-fixed": "#62ff96",
+              "on-error": "#690005",
+              "inverse-on-surface": "#22342e",
+              "on-surface-variant": "#bacbb9",
+              "on-primary-fixed-variant": "#005226",
+              "inverse-surface": "#d2e7df",
+              "on-secondary-fixed": "#002112",
+              "on-primary": "#003918",
+              "background": "#051612",
+              "primary": "#75ff9e",
+              "on-surface": "#d2e7df",
+              "tertiary-fixed": "#ffdcbf",
+              "on-tertiary-fixed-variant": "#6a3c03",
+              "surface-bright": "#2b3d37",
+              "on-tertiary-fixed": "#2d1600",
+              "surface-container-highest": "#263833",
+              "on-primary-container": "#00612e",
+              "secondary-container": "#125136",
+              "on-tertiary": "#4b2800",
+              "error": "#ffb4ab",
+              "tertiary-container": "#ffba79",
+              "on-secondary": "#003823",
+              "surface-container-low": "#0d1f1a",
+              "secondary-fixed": "#b2f0cb",
+              "on-background": "#d2e7df",
+              "outline-variant": "#3b4a3d",
+              "inverse-primary": "#006d35",
+              "surface-variant": "#263833",
+              "surface-dim": "#051612",
+              "on-primary-fixed": "#00210b",
+              "surface": "#051612",
+              "surface-container-high": "#1c2d28",
+              "primary-fixed-dim": "#00e475",
+              "outline": "#859585",
+              "error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .success-glow {
+            box-shadow: 0 0 60px 10px rgba(0, 230, 118, 0.2);
+        }
+        .glass-panel {
+            background: rgba(43, 61, 55, 0.4);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body min-h-screen flex flex-col">
+<!-- Top Navigation Anchor -->
+<header class="bg-[#051612]/80 backdrop-blur-xl shadow-[0_0_30px_rgba(2,17,13,0.4)] fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4">
+<div class="text-[#00E676] font-bold tracking-tighter font-headline uppercase text-sm">Zone 4B</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#BACBB9] hover:opacity-80 transition-opacity cursor-pointer">notifications</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant/20 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="portrait of a young man with a friendly expression in a modern urban environment with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACpohdzjINYvIHMT0AL85jKubT2ZaVFLZrkCqglD1v7_BKbp__Kghe54yn-bfOGssqWnjwGlfvbi-GXDOUkLfmqYlBh-d-BUeut07xX8H32cYU02lMQTqIJQRs_WgTlk35soZm8FDsJtWNNu4dGb5c83y06eYJ0wJxyJPy6vt3nK7-kH7xKgfnEOkNuaUl5wmfErSBLyEwhipZBTWoyDM4UiZjbm_ZU_lj2_fY_-DW_YcEx-FJgCUsIaVgH7ar9UeuRSKMBgBPoQ"/>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center px-6 pt-24 pb-12 max-w-lg mx-auto w-full">
+<!-- Central Success Indicator -->
+<div class="relative mb-12">
+<!-- Outer Glow Rings -->
+<div class="absolute inset-0 rounded-full bg-primary-container/5 scale-150 animate-pulse"></div>
+<div class="absolute inset-0 rounded-full bg-primary-container/10 scale-125"></div>
+<!-- Success Icon Circle -->
+<div class="relative w-32 h-32 md:w-40 md:h-40 bg-primary-container rounded-full flex items-center justify-center success-glow">
+<span class="material-symbols-outlined text-on-primary text-6xl md:text-7xl font-bold" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+</div>
+<!-- Text Content -->
+<div class="text-center space-y-4 mb-12">
+<h1 class="font-headline font-bold text-3xl md:text-4xl tracking-tight text-on-background">
+                Pickup Requested Successfully!
+            </h1>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-xs mx-auto">
+                Your collector will arrive tomorrow between <span class="text-primary font-semibold">7 AM - 10 AM</span>
+</p>
+</div>
+<!-- Info Card (Asymmetric Layout) -->
+<div class="w-full surface-container bg-surface-container-low rounded-xl p-6 mb-12 border border-outline-variant/10 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+<div class="flex justify-between items-start mb-6">
+<div>
+<div class="font-headline uppercase tracking-widest text-[10px] text-on-surface-variant mb-1">Request ID</div>
+<div class="font-mono text-sm text-on-surface">#ET-8829-4B</div>
+</div>
+<div class="text-right">
+<div class="font-headline uppercase tracking-widest text-[10px] text-on-surface-variant mb-1">Weight Est.</div>
+<div class="text-sm text-on-surface">4.5 KG</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+</div>
+<div>
+<div class="text-[11px] text-on-surface-variant font-medium">Collection Point</div>
+<div class="text-sm text-on-surface">Building C, Entrance 4</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">recycling</span>
+</div>
+<div>
+<div class="text-[11px] text-on-surface-variant font-medium">Waste Type</div>
+<div class="text-sm text-on-surface">Mixed Recyclables</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="w-full space-y-6">
+<button class="w-full bg-primary-container text-on-primary font-bold py-5 rounded-full shadow-[0_0_20px_rgba(0,230,118,0.2)] active:scale-95 transition-all duration-200 uppercase tracking-widest text-sm font-headline">
+                View Status
+            </button>
+<div class="text-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium flex items-center justify-center gap-2 group" href="#">
+<span class="material-symbols-outlined text-sm group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                    Back to Home
+                </a>
+</div>
+</div>
+</main>
+<!-- Visual Texture Element (Bottom) -->
+<div class="fixed bottom-0 left-0 w-full h-32 pointer-events-none overflow-hidden opacity-30">
+<div class="absolute bottom-[-50px] left-[-20px] w-[300px] h-[300px] rounded-full bg-primary-container/10 blur-[100px]"></div>
+<div class="absolute bottom-[-100px] right-[-50px] w-[400px] h-[400px] rounded-full bg-secondary-container/10 blur-[120px]"></div>
+</div>
+<!-- Decorative Image (Subtle Background Context) -->
+<div class="fixed inset-0 -z-10 opacity-5">
+<img class="w-full h-full object-cover grayscale" data-alt="lush deep forest canopy viewed from below with subtle sunlight filtering through leaves in high contrast dark green tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGM_H4dqJtF4wpTxf9TdAz8B9nTdrww5yuJVQwfiodNUpqYi6tN56BQdMOWn8ZeyXmikZiQ5wn-aUkaFMlPVqZH8jJJfZSYqYbBwjEeSTKNZDcwFwdxR4Gdh9L5lNGVt6jWXMdJVR5fzWKwNaDwi0rdojLOUzZt0kBrVBlVg4LmSsXUE1sK7MDGV04dEPsjP0bGF_fjJhL2GhCtv_NwXliXareuLidK7S11I2F6jq4hKvLZo6U2OIZj1wDSKuGHUkxk0VkPQNzyg"/>
+</div>
+</body></html>
