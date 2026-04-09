@@ -338,8 +338,6 @@ class _ScheduleViewState extends ConsumerState<ScheduleView> {
               children: [
                 _InfoRow(label: "REQUEST ID", value: "#ET-${DateFormat('Hmm').format(DateTime.now())}-4B"),
                 Divider(height: 32, color: cs.outlineVariant, thickness: 0.5),
-                _InfoRow(label: "WEIGHT EST.", value: "4.5 KG"),
-                Divider(height: 32, color: cs.outlineVariant, thickness: 0.5),
                 _InfoRow(label: "COLLECTION POINT", value: "Building C, Entrance 4"),
               ],
             ),

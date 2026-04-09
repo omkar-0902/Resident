@@ -3,8 +3,22 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../core/haptics.dart';
 import '../../../shared/widgets/custom_text_field.dart';
 
-class RegistrationView extends StatelessWidget {
+
+class RegistrationView extends StatefulWidget {
   const RegistrationView({super.key});
+
+  @override
+  State<RegistrationView> createState() => _RegistrationViewState();
+}
+
+class _RegistrationViewState extends State<RegistrationView> {
+  // ✅ Controllers
+  final TextEditingController userNameController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
+  final TextEditingController addressController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
+  bool isLoading = false;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +28,11 @@ class RegistrationView extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_new, color: Theme.of(context).colorScheme.onSurface, size: 20),
+          icon: Icon(
+            Icons.arrow_back_ios_new,
+            color: Theme.of(context).colorScheme.onSurface,
+            size: 20,
+          ),
           onPressed: () {
             AppHaptics.lightImpact();
             Navigator.pop(context);
@@ -37,6 +55,7 @@ class RegistrationView extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 8),
+
               Text(
                 "Create your\nEco Account",
                 style: GoogleFonts.spaceGrotesk(
@@ -46,54 +65,95 @@ class RegistrationView extends StatelessWidget {
                   color: Theme.of(context).colorScheme.onSurface,
                 ),
               ),
+
               const SizedBox(height: 40),
-              
-              const CustomTextField(
+
+              // ✅ Full Name
+              CustomTextField(
                 label: "Full Name",
                 hint: "John Doe",
                 prefixIcon: Icons.person_outline,
+                controller: userNameController,
               ),
               const SizedBox(height: 20),
-              const CustomTextField(
-                label: "Email Address",
-                hint: "john@example.com",
-                prefixIcon: Icons.alternate_email,
-                keyboardType: TextInputType.emailAddress,
+
+              // ✅ Phone Number
+              CustomTextField(
+                label: "Phone Number",
+                hint: "9876543210",
+                prefixIcon: Icons.phone_outlined,
+                keyboardType: TextInputType.phone,
+                controller: phoneController,
               ),
               const SizedBox(height: 20),
-              const CustomTextField(
-                label: "Property ID",
-                hint: "Z4B-1029",
-                prefixIcon: Icons.home_work_outlined,
+
+              // ✅ Address
+              CustomTextField(
+                label: "Address",
+                hint: "Goa",
+                prefixIcon: Icons.location_on_outlined,
+                controller: addressController,
               ),
               const SizedBox(height: 20),
-              const CustomTextField(
+
+              // ✅ Password
+              CustomTextField(
                 label: "Password",
                 hint: "••••••••",
                 obscureText: true,
                 prefixIcon: Icons.lock_outline,
+                controller: passwordController,
               ),
+
               const SizedBox(height: 48),
-              
+
+              // 🚀 REGISTER BUTTON
               ElevatedButton(
-                onPressed: () {
+                onPressed: () async {
                   AppHaptics.mediumImpact();
-                  Navigator.pushReplacementNamed(context, '/home');
+
+                  setState(() => isLoading = true);
+
+                  await Future.delayed(const Duration(seconds: 2));
+                  String result = "SUCCESS";
+
+                  setState(() => isLoading = false);
+
+                  if (result == "SUCCESS") {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text("Registration Successful")),
+                    );
+
+                    Navigator.pop(context); // back to login
+                  } else if (result == "FORBIDDEN") {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text("User already exists")),
+                    );
+                  } else {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text("Something went wrong")),
+                    );
+                  }
                 },
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(double.infinity, 64),
                 ),
-                child: const Text("INITIALIZE ACCOUNT"),
+                child: isLoading
+                    ? const CircularProgressIndicator(color: Colors.white)
+                    : const Text("INITIALIZE ACCOUNT"),
               ),
+
               const SizedBox(height: 24),
-              
+
               // T&C
               Center(
                 child: Text(
                   "By joining, you agree to our Eco-Directives.",
                   style: GoogleFonts.inter(
                     fontSize: 12,
-                    color: Theme.of(context).colorScheme.onSurfaceVariant.withOpacity(0.7),
+                    color: Theme.of(
+                      context,
+                    ).colorScheme.onSurfaceVariant.withOpacity(0.7),
                   ),
                 ),
               ),
